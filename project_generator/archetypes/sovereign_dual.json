@@ -1,0 +1,31 @@
+{
+  "archetype_id": "sovereign_dual",
+  "name": "Sovereign Dual-Client Architecture (Web Admin + Mobile Edge Terminal)",
+  "description": "Enterprise GovTech / FinTech architecture featuring independent Web Command Center and rugged Mobile Edge Terminal with offline Ed25519 signing and Supabase synchronization.",
+  "departments_activated": [
+    "00_MAIN_SUPREME_ARCHITECT",
+    "01_SECURITY_AND_ZERO_TRUST_ARCHITECT",
+    "02_DATABASE_AND_STATE_ARCHITECT",
+    "03_UI_UX_AND_DESIGN_ARCHITECT",
+    "04_MULTI_AGENT_AND_SYNC_ARCHITECT",
+    "05_PENTEST_AND_VULNERABILITY_ARCHITECT",
+    "06_AUDIT_REPORTING_AND_LOGS_ARCHITECT",
+    "07_AUTOMATION_AND_SCRIPTS_ARCHITECT"
+  ],
+  "invariants": {
+    "cryptography": "Ed25519 + RFC 8785 Canonical JSON + HMAC-SHA256 Ephemeral QR",
+    "encryption": "AES-GCM-256 Client-Side Field-Level Encryption for PII",
+    "offline_engine": "SQLite (Mobile) + Encrypted IndexedDB Dexie (Web)",
+    "central_db": "PostgreSQL 15+ (Supabase) with Atomic RPCs and Row-Level Security",
+    "design_theme": "GovTech Institutional Palette (Ivory #fbfbf7, Forest Green #214239, Sage #789085, Emerald #166c52)",
+    "typography": "Newsreader Serif (Headings) + Inter/Geist (Tables) + JetBrains Mono (Hashes)"
+  },
+  "required_docs": [
+    "SPEC.md",
+    "ROADMAP.md",
+    "DATA_FLOWS.md",
+    "SECURITY_MATRIX.md",
+    "TEST_PLAN.md",
+    "INCIDENT_LOG.md"
+  ]
+}

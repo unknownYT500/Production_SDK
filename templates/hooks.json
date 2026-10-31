@@ -1,0 +1,11 @@
+{
+  "conversation-archiver": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "python ./.agents/scripts/archive_conversation.py --hook",
+        "timeout": 30
+      }
+    ]
+  }
+}

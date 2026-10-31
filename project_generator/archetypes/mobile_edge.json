@@ -1,0 +1,29 @@
+{
+  "archetype_id": "mobile_edge",
+  "name": "Mobile Edge Terminal (Flutter / Android + Local SQLite + Asynchronous Sync)",
+  "description": "Rugged edge client architecture designed for low-power handheld terminals, intermittent connectivity, hardware keystore cryptography, and resilient outbox synchronization.",
+  "departments_activated": [
+    "00_MAIN_SUPREME_ARCHITECT",
+    "01_SECURITY_AND_ZERO_TRUST_ARCHITECT",
+    "02_DATABASE_AND_STATE_ARCHITECT",
+    "03_UI_UX_AND_DESIGN_ARCHITECT",
+    "04_MULTI_AGENT_AND_SYNC_ARCHITECT",
+    "06_AUDIT_REPORTING_AND_LOGS_ARCHITECT"
+  ],
+  "invariants": {
+    "framework": "Flutter 3 (Dart 3.x) with Clean Architecture & Material 3",
+    "local_storage": "SQLite (sqflite) with Durable Outbox Queue",
+    "cryptography": "Asymmetric Signing (Ed25519) + Android Keystore Hardware Isolation",
+    "canonical_serialization": "RFC 8785 Deterministic Canonical JSON",
+    "network_assumption": "Zero / Intermittent Connectivity (Offline-First Invariant)",
+    "ui_ergonomics": "High-Contrast Outdoors, Min 44px Touch Targets, Haptic Feedback"
+  },
+  "required_docs": [
+    "SPEC.md",
+    "ROADMAP.md",
+    "DATA_FLOWS.md",
+    "SECURITY_MATRIX.md",
+    "TEST_PLAN.md",
+    "INCIDENT_LOG.md"
+  ]
+}

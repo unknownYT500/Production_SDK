@@ -1,0 +1,30 @@
+{
+  "archetype_id": "web_fullstack",
+  "name": "Web Fullstack Application (React/Next.js + Node API + PostgreSQL)",
+  "description": "Modern fullstack web application featuring rich editorial UI, REST/GraphQL APIs, relational database migrations, and zero-trust authentication.",
+  "departments_activated": [
+    "00_MAIN_SUPREME_ARCHITECT",
+    "01_SECURITY_AND_ZERO_TRUST_ARCHITECT",
+    "02_DATABASE_AND_STATE_ARCHITECT",
+    "03_UI_UX_AND_DESIGN_ARCHITECT",
+    "05_PENTEST_AND_VULNERABILITY_ARCHITECT",
+    "06_AUDIT_REPORTING_AND_LOGS_ARCHITECT",
+    "07_AUTOMATION_AND_SCRIPTS_ARCHITECT"
+  ],
+  "invariants": {
+    "frontend": "React 19 / Next.js with Curated CSS Design System (Anti-AI Slop)",
+    "backend": "Express 5 / Node.js with Zod Validation & Asymmetric JWKS Auth",
+    "database": "PostgreSQL with Row-Level Security (RLS) & Atomic Stored Procedures",
+    "security": "Client-Side Field Encryption (AES-GCM-256) + Edge Security Headers",
+    "rate_limiting": "Redis Distributed Store with Failover to Memory",
+    "testing": "Automated Unit, Integration & DAST Negative Security Tests"
+  },
+  "required_docs": [
+    "SPEC.md",
+    "ROADMAP.md",
+    "DATA_FLOWS.md",
+    "SECURITY_MATRIX.md",
+    "TEST_PLAN.md",
+    "INCIDENT_LOG.md"
+  ]
+}

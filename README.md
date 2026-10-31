@@ -1,76 +1,160 @@
-# Sovereign Production Engineering SDK (SovereignSDK)
-
-> **Origin:** Born from real-world engineering trials, high-stress architectural sprints, and rigorous independent penetration testing of the **RationSafe / GrainTrust** mission-critical public distribution platform.  
-> **Mission:** To transform hard-earned hackathon learnings, operational failsafes, and discipline into a reusable, production-grade Software Development Kit (SDK) and architectural framework. Next time we build an enterprise or GovTech application, every decision will follow a calculated, controlled, and battle-tested protocol.
-
----
-
-## 🏛️ Why This SDK Exists
-
-Building mission-critical systems under tight deadlines exposes the subtle cracks that exist in standard web and cloud practices:
-* **The "Happy Path" Fallacy:** Systems often work when online, but collapse into cascading 401s, 500s, or uncaught exceptions during network degradation or offline edge operations.
-* **Security vs. Usability Friction:** Hardening a database with Row-Level Security (RLS) can accidentally break legitimate background telemetry or unauthenticated public kiosk functions if data boundaries are not architected cleanly from Day 1.
-* **Ad-Hoc Architecture Drift:** Without formal state machines and strict data contracts, state variables drift, leading to race conditions, double-spending vulnerabilities, and untraceable bugs.
-* **Documentation as an Afterthought:** Trying to write technical specifications, compliance reports, and defense guides at the end of a project is chaotic. Documentation and publication-grade reporting must be built directly into the engineering loop.
+# Sovereign AI Governance SDK (SovereignSDK)
+> **The Constitutional Protocol & Meta-Architecture Governing Autonomous AI Engineering**  
+> **Origin:** Born from real-world engineering trials, high-stress hackathon sprints, and independent penetration testing (ArgosX / Strix) of the **RationSafe / GrainTrust** sovereign public distribution platform.  
+> **Mission:** To transform hard-earned engineering lessons and the 22 core points in [`SDK_POINTS.txt`](file:///c:/Users/shubh/Downloads/-hat--main/-hat--main/SDK/SDK_POINTS.txt) into an authoritative, modular governance framework. Every action, bug fix, feature addition, and refactor is governed by strict, self-moulding protocols that eliminate AI hallucination, error masking, multi-agent collisions, and AI-slop design.
 
 ---
 
-## 📦 Directory Structure
+## 🏛️ The Three-Tier Architecture
+
+The Sovereign SDK is structured into three interlocking tiers of governance:
+
+```
+                                  +---------------------------------------+
+                                  |         TIER 1: CORE CONSTITUTION     |
+                                  |  - Zero-Lying & Harsh Factual Truth   |
+                                  |  - Dynamic Project Profile Moulding   |
+                                  |  - Generative Architecture Synthesis  |
+                                  +-------------------+-------------------+
+                                                      |
+                                                      v
+                                  +---------------------------------------+
+                                  |     TIER 2: DEPARTMENT ARCHITECTS     |
+                                  |  - Main Supreme Architect (Governor)  |
+                                  |  - Security & Zero-Trust Architect    |
+                                  |  - Database & Cloud State Architect   |
+                                  |  - UI/UX & Anti-Slop Design Architect |
+                                  |  - Multi-Agent Cross-Device Architect |
+                                  |  - Pentest & Vulnerability Architect  |
+                                  |  - Audit & Living Logs Architect      |
+                                  |  - Automation & Scripts Architect     |
+                                  +-------------------+-------------------+
+                                                      |
+                                                      v
+                                  +---------------------------------------+
+                                  |       TIER 3: ACTION PROTOCOLS        |
+                                  |  - Action: Bug Fixing & Root Cause    |
+                                  |  - Action: Addition of New Feature    |
+                                  |  - Action: Changing / Refactoring     |
+                                  |  - Action: Reverting / Failsafe Roll  |
+                                  |  - Action: 5-Tier Health Audit        |
+                                  |  - Action: Human Review & Intake      |
+                                  +---------------------------------------+
+```
+
+---
+
+## 📂 SDK Directory Map
 
 ```
 SDK/
-├── README.md                      # This manifesto and SDK architectural blueprint
-├── raw_notes.md                   # Staging area for raw developer notes, hurdles & observations
-└── SDK_development/               # Core analytical laboratory and engineering incubator
-    ├── README.md                  # Development methodology, milestones & checklists
-    ├── faults_and_failsafes_analysis.md # Comprehensive post-mortem of project hurdles & fixes
-    ├── protocols/                 # Standard Operating Procedures (SOPs) for development
-    ├── modules/                   # Core SDK libraries (Logging, Auth, DB, Crypto, Outbox)
-    └── templates/                 # Reusable production templates (Express, React, Supabase)
+├── README.md                                         # This Master Architecture Document
+├── SDK_POINTS.txt                                    # Historical 22 Core Post-Mortem Observations
+├── raw_notes.md                                      # Developer hurdle staging journal
+│
+├── core_constitution/                                # Universal Invariants (All Projects)
+│   ├── 00_SUPREME_CONSTITUTION.md                    # Zero-lying, proof-first, truth policy
+│   ├── 01_PROJECT_PROFILE_AND_MOULDING_MATRIX.md     # Dynamic adaptation (Web, Mobile, Edge, API, AI)
+│   └── 02_GENERATIVE_ARCHITECTURE_PROTOCOL.md        # Autonomous generation of .project_docs/
+│
+├── action_protocols/                                 # Protocols Governing Every Action
+│   ├── 01_ACTION_BUG_FIXING.md                       # 6-step root-cause isolation & regression testing
+│   ├── 02_ACTION_ADD_NEW_FEATURE.md                  # Interface-first, context-budgeted feature flow
+│   ├── 03_ACTION_CHANGE_OR_REFACTOR_FEATURE.md       # Blast-radius analysis & backwards compatibility
+│   ├── 04_ACTION_REVERT_CHANGES.md                   # 5-step emergency rollback & failsafe restoration
+│   ├── 05_ACTION_AUDIT_AND_HEALTH_CHECK.md           # 5-tier multi-dimensional audit & human gate
+│   └── 06_ACTION_HUMAN_REVIEW_AND_INPUT.md           # Deconstruction of feedback & destructive gates
+│
+├── department_architects/                            # The Specialized Governing Departments
+│   ├── 00_MAIN_SUPREME_ARCHITECT.md                  # Master Governor: coordinates & spawns specs
+│   ├── 01_SECURITY_AND_ZERO_TRUST_ARCHITECT.md       # AES-GCM-256 PII encryption & Ed25519 signing
+│   ├── 02_DATABASE_AND_STATE_ARCHITECT.md            # Schema purity, RLS & atomic RPC mutations
+│   ├── 03_UI_UX_AND_DESIGN_ARCHITECT.md              # Anti-slop, GovTech palette & typography
+│   ├── 04_MULTI_AGENT_AND_SYNC_ARCHITECT.md          # Cross-device locks, PR reviews & Git queues
+│   ├── 05_PENTEST_AND_VULNERABILITY_ARCHITECT.md     # Strix/ArgosX DAST, headers & threat models
+│   ├── 06_AUDIT_REPORTING_AND_LOGS_ARCHITECT.md      # Prompt-labeled logs & PDF master tech book
+│   └── 07_AUTOMATION_AND_SCRIPTS_ARCHITECT.md        # UTF-8 Windows safety & non-interactive scripts
+│
+├── project_generator/                                # Autonomous Project Synthesis Engine
+│   ├── generator_script.py                           # Python script to mould & bootstrap projects
+│   └── archetypes/                                   # Project Archetypes (Dual, Web, Mobile, API)
+│       ├── sovereign_dual.json                       # Sovereign Dual-Client (Web + Mobile Terminal)
+│       ├── web_fullstack.json                        # Fullstack Web Application (React + Node + DB)
+│       └── mobile_edge.json                          # Mobile Edge Terminal (Flutter + SQLite)
+│
+├── tools/                                            # Autonomous Utility Tools
+│   └── archive_conversation.py                       # Conversation archiver CLI & Antigravity Hook
+│
+├── templates/                                        # Boilerplates for Initialized Projects
+│   ├── hooks.json                                    # Antigravity Stop Lifecycle Hook configuration
+│   └── scripts/
+│       └── archive_conversation.py                   # Self-contained archiver script for .agents/scripts/
+│
+├── skills/                                           # Ready-to-Use Agent Skills Library (.agents/skills)
+│   ├── spec-driven-development/                      # SDD: PRD & spec before code (Planning Lock)
+│   ├── grill-me/                                     # Socratic requirements interview & tradeoff alignment
+│   ├── test-driven-development/                      # Strict Red-Green-Refactor loop & test proof
+│   ├── diagnosing-bugs/                              # Five Whys root cause analysis & anti-masking
+│   ├── security-audit/                               # OWASP Top 10, secret scanning & DAST verification
+│   ├── accidental-data-loss-prevention/              # Stop-and-Verify gate on destructive operations
+│   ├── zero-downtime-migrations/                     # Expand-and-contract, schema purity & atomic RPCs
+│   ├── frontend-design/                              # Anti-AI slop, curated palettes & editorial typography
+│   ├── responsive-layout-builder/                    # Tri-breakpoint verification (390px, 768px, 1440px)
+│   ├── context-engineering/                          # Token budgeting, search-first, memory compaction
+│   ├── code-review/                                  # Senior engineer PR review before merge
+│   ├── retro/                                        # Post-incident continuous learning & living rules
+│   ├── cross-device-agent-sync/                      # Distributed domain locks & multi-laptop Git queues
+│   └── pre-and-post-deploy-verify/                   # Pre-build checks & post-deploy live HTTP verification
+│
+└── SDK_development/                                  # Historical Laboratory & Incident Analysis
+    ├── README.md                                     # Post-mortem methodology
+    └── faults_and_failsafes_analysis.md              # Granular analysis of 7 critical hackathon hurdles
 ```
 
 ---
 
-## 🛡️ The 6 Core SDK Pillars
+## ⏺️ Autonomous Build-Phase AI Conversation Archiving
 
-```
-+---------------------------------------------------------------------------------------------------+
-|                                     SOVEREIGN SDK PILLARS                                         |
-+---------------------------------------------------------------------------------------------------+
-|  1. Structured Observability   : Structured JSON, W3C Distributed Tracing, Zero-PII Log Guard    |
-|  2. Hardened Data Access Layer : Multi-tier fallback, atomic RPCs, strict RLS separation          |
-|  3. Cryptographic Invariants   : Canonical RFC 8785 JSON, Ed25519 signing, AES-GCM-256 vault       |
-|  4. Deterministic State Logic  : Formal finite-state machines, idempotent deduplication           |
-|  5. Living Documentation Habit : Markdown-driven specifications, automated PDF report generation  |
-|  6. Safe Release Engineering   : Surgical git commits, directory protection, automated pentesting |
-+---------------------------------------------------------------------------------------------------+
-```
+One of the greatest dangers in AI pair programming is **conversational amnesia**—valuable architecture debates, prompt iterations, bug diagnoses, and decision rationale vanish once a session is closed or context-compacted.
 
-### 1. Structured Observability & Telemetry
-- Never use raw `console.log` in production.
-- Structured JSON logs with standard metadata: timestamp, log level, request ID, trace context, and error category.
-- PII-sanitization filters that automatically scrub phone numbers, Aadhaar IDs, and private tokens before strings touch standard output.
+The Sovereign SDK includes an **Autonomous Archiver Engine** powered by Antigravity Lifecycle Hooks:
 
-### 2. Zero-Leakage Data Access Layer (DAL)
-- Strict separation between **Public Operational Data** (machine telemetry, depot status, granary stocks) and **Sensitive Citizen Data** (KYC records, income, demographics).
-- Never overload a single database table to store both sensitive records and unauthenticated telemetry.
-- All high-concurrency mutations must execute via atomic database stored procedures (RPCs) with explicit row locking.
+1. **Zero-Friction Automation:**
+   - Whenever an agent turn completes (`Stop` event), Antigravity executes `python ./.agents/scripts/archive_conversation.py --hook`.
+   - The archiver reads the live Antigravity JSONL transcript and automatically saves a structured, human-readable Markdown log in `.ai_transcripts/` in your project folder:
+     ```
+     .ai_transcripts/conversation_<CONVERSATION_ID>_<TIMESTAMP>.md
+     ```
+2. **Lossless Forensic Trajectory:**
+   - **User Prompts:** Chronologically cataloged with ISO UTC timestamps.
+   - **Agent Responses:** Full architectural explanations, trade-off analyses, and reasoning.
+   - **Tool Calls:** Collapsible `<details>` blocks capturing exact tool names, parameters, and statuses.
+3. **Turnkey in Every Project:**
+   - When you run `generator_script.py`, it automatically initializes `.agents/hooks.json`, `.agents/scripts/archive_conversation.py`, and `.ai_transcripts/` inside the target project.
+4. **Manual Archiving On Demand:**
+   - You can also archive any active session manually via CLI:
+     ```bash
+     python ./.agents/scripts/archive_conversation.py --conversation-id <CONV_ID>
+     ```
 
-### 3. Cryptographic Invariants & Fault-Tolerant Edge Computing
-- Pure TypeScript asymmetric cryptography (Ed25519) running identically in browser WebWorkers, Node.js, and mobile environments.
-- Deterministic canonicalization (RFC 8785) preventing key-order signature validation failures.
-- Offline-first durable outbox queue with exponential backoff and SHA-256 idempotency deduplication.
+---
 
-### 4. Deterministic Finite-State Machines
-- Core business workflows (payments, grain disbursals, order fulfillment) must be modeled as strict mathematical state machines.
-- State transitions must be validated against a formal transition matrix, rejecting illegal jumps or state rollbacks with structured error codes.
+## 🚀 Standalone Portability: Using the SDK in Future Projects
 
-### 5. Automated Publication-Grade Reporting Habit
-- Architectural diagrams, API specifications, and security audits maintained continuously in version-controlled Markdown.
-- One-click headless conversion pipelines to generate publication-grade PDF manuals with typography, syntax highlighting, and visual callouts.
+The `SDK/` folder is **100% project-independent** and can be dropped into any new repository (FinTech, SaaS, Mobile, GovTech, IoT, AI/ML):
 
-### 6. Controlled Release Engineering & Git Protocols
-- "Stop-and-Verify" discipline before making destructive changes.
-- Surgical, minimal diffs with zero unrelated refactoring.
-- Directory locks ensuring critical client folders (e.g., `mobile/`) remain 100% untouched while backend or web systems are modified.
-- Automated regression test suites and independent DAST pentest scripts executing before any production deployment.
+1. **Copy the SDK:**
+   ```bash
+   cp -r /path/to/SDK /path/to/new-project/SDK
+   ```
+2. **Install the Agent Skills:**
+   ```bash
+   mkdir -p /path/to/new-project/.agents/skills
+   cp -r /path/to/new-project/SDK/skills/* /path/to/new-project/.agents/skills/
+   ```
+3. **Bootstrap Project Documentation & Conversation Hooks:**
+   ```bash
+   python SDK/project_generator/generator_script.py --archetype web_fullstack --name "MyNewProduct" --target .
+   ```
+This activates the Supreme Governor, sets the Planning Lock, synthesizes the `.project_docs/` suite, sets up `.agents/hooks.json` for autonomous AI conversation archiving, and prepares your new project for production-grade engineering!
+
