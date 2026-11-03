@@ -20,12 +20,12 @@ The **Main Supreme Architect** ensures that a project is not built as a chaotic 
                                   |   (Intake, Profiling, Orchestration)  |
                                   +-------------------+-------------------+
                                                       |
-         +--------------------+-----------------------+-----------------------+--------------------+
-         |                    |                       |                       |                    |
-         v                    v                       v                       v                    v
-  [SECURITY ARCHITECT] [DATABASE ARCHITECT]    [UI/UX ARCHITECT]      [MULTI-AGENT SYNC]    [PENTEST ARCHITECT]
-  - Zero-Trust Core    - Schema Purity         - Editorial Theme      - Distributed Locks   - DAST/ArgosX Rules
-  - Field Encryption   - Atomic RPCs           - Anti-Slop Layouts    - Git PR Reviews      - Header Security
+         +--------------------+-----------------------+-----------------------+--------------------+--------------------+
+         |                    |                       |                       |                    |                    |
+         v                    v                       v                       v                    v                    v
+  [SECURITY ARCHITECT] [DATABASE ARCHITECT]    [UI/UX ARCHITECT]      [MULTI-AGENT SYNC]    [PENTEST ARCHITECT]   [WORKFLOW ARCHITECT]
+  - Zero-Trust Core    - Schema Purity         - Editorial Theme      - Distributed Locks   - DAST/ArgosX Rules   - Interactive Flowcharts
+  - Field Encryption   - Atomic RPCs           - Anti-Slop Layouts    - Git PR Reviews      - Header Security     - Madge/Code2Flow/AppMap
 ```
 
 ---

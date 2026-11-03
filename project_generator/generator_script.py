@@ -214,6 +214,16 @@ python ./.agents/scripts/archive_conversation.py --conversation-id <CONVERSATION
                     shutil.copytree(skill_dir, target_skill)
         print("  [+] Installed: 14 Specialized Agent Skills into .agents/skills/")
 
+    # Synthesize starter visual workflow flowchart
+    try:
+        viz_tool = SDK_ROOT / "tools" / "visualize_project_flow.py"
+        if viz_tool.exists():
+            import subprocess
+            subprocess.run([sys.executable, str(viz_tool), "--project-dir", str(target_dir), "--name", project_name], capture_output=True)
+            print("  [+] Synthesized: .project_docs/WORKFLOW_FLOWCHART.html & appmap.yml")
+    except Exception as e:
+        print(f"  [!] Notice: Flowchart generator deferred: {e}")
+
     print("\n[SUCCESS] Project Documentation Suite, Master Control & Autonomous Archiver initialized.")
     print("All Department Architects and Action Protocols are active and governing agent execution.")
 

@@ -72,7 +72,7 @@ Every single AI response must strictly traverse the following 7-phase state mach
         │ If not finalized, BLOCK implementation and trigger Planning Phase.
         ▼
 [Phase 3: Department Architect Consultation]
-        │ Consults: Security (01), DB/RLS (02), UI/Design (03), Multi-Agent (04), Pentest (05)
+        │ Consults: Security (01), DB/RLS (02), UI/Design (03), Multi-Agent (04), Pentest (05), Workflow/Flowchart (08)
         ▼
 [Phase 4: Search-First Investigation]
         │ Prohibits blind whole-file reads. Uses ripgrep/grep to locate exact anchors.

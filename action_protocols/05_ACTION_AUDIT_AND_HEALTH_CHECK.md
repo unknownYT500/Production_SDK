@@ -5,18 +5,18 @@
 
 ---
 
-## 1. The 5-Tier Comprehensive Audit Framework
+## 1. The 6-Tier Comprehensive Audit Framework
 
 A Sovereign Audit evaluates a project across five rigorous quality and security dimensions:
 
 ```
 +---------------------------------------------------------------------------------------------------+
-|                                  THE 5-TIER HEALTH AUDIT MATRIX                                   |
+|                                  THE 6-TIER HEALTH AUDIT MATRIX                                   |
 +--------------------+--------------------+--------------------+--------------------+---------------+
-| TIER 1: CODEBASE   | TIER 2: SECURITY   | TIER 3: NETWORK    | TIER 4: UI/UX      | TIER 5: PERF  |
-| - TypeScript/Linter| - DAST / SAST scan | - DevTools inspect | - Layout viewport  | - Bundle size |
-| - Unused imports   | - ArgosX / Strix   | - 4xx / 5xx audits | - WCAG AA contrast | - Cold-start  |
-| - Type assertions  | - Secret leaks     | - CORS / Headers   | - Anti-slop checks | - Memory leak |
+| TIER 1: CODEBASE   | TIER 2: SECURITY   | TIER 3: NETWORK    | TIER 4: UI/UX      | TIER 5: PERF  | TIER 6: WORKFLOW MAP |
+| - TypeScript/Linter| - DAST / SAST scan | - DevTools inspect | - Layout viewport  | - Bundle size | - Madge circular map |
+| - Unused imports   | - ArgosX / Strix   | - 4xx / 5xx audits | - WCAG AA contrast | - Cold-start  | - Code2Flow call graph|
+| - Type assertions  | - Secret leaks     | - CORS / Headers   | - Anti-slop checks | - Memory leak | - AppMap runtime cfg |
 +--------------------+--------------------+--------------------+--------------------+---------------+
 ```
 
@@ -95,3 +95,15 @@ At the conclusion of the 5-Tier Audit, the agent must output an **Executive Audi
 - **Recommendation:** Codebase is healthy and production-ready.
 👉 **Awaiting human verification before deploying to live production.**
 ```
+
+
+### TIER 6: Visual Workflow & Architectural Coupling Audit
+1. **Execute Flowchart Synthesizer:**
+   ```bash
+   python SDK/tools/visualize_project_flow.py --project-dir .
+   ```
+2. **Circular Coupling Gate:**
+   - Assert Madge reports zero circular dependencies: `[PASS] Zero Circular Dependencies Detected`.
+   - If circular couplings are found, fail the audit immediately until decoupled.
+3. **Concepts & Libraries Audit:**
+   - Verify that all libraries in `package.json` are properly categorized and explained in `.project_docs/WORKFLOW_FLOWCHART.html`.

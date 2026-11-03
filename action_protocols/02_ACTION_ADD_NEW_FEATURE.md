@@ -25,7 +25,7 @@ Every new feature added by an AI agent must progress through these six gated sta
 [STAGE 5: VERIFICATION & AUDIT] ──► Write unit, integration & negative tests; verify build.
               │
               ▼
-[STAGE 6: LIVING DOCS & ARCHITECTURE] ──► Update DATA_FLOWS.md, README, and API schemas.
+[STAGE 6: LIVING DOCS & WORKFLOW MAP] ──► Compile interactive WORKFLOW_FLOWCHART.html & audit.
 ```
 
 ---

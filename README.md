@@ -73,7 +73,8 @@ SDK/
 │   ├── 04_MULTI_AGENT_AND_SYNC_ARCHITECT.md          # Cross-device locks, PR reviews & Git queues
 │   ├── 05_PENTEST_AND_VULNERABILITY_ARCHITECT.md     # Strix/ArgosX DAST, headers & threat models
 │   ├── 06_AUDIT_REPORTING_AND_LOGS_ARCHITECT.md      # Prompt-labeled logs & PDF master tech book
-│   └── 07_AUTOMATION_AND_SCRIPTS_ARCHITECT.md        # UTF-8 Windows safety & non-interactive scripts
+│   ├── 07_AUTOMATION_AND_SCRIPTS_ARCHITECT.md        # UTF-8 Windows safety & non-interactive scripts
+│   └── 08_WORKFLOW_AND_FLOWCHART_ARCHITECT.md       # Madge, Code2Flow & AppMap visual flowcharts
 │
 ├── project_generator/                                # Autonomous Project Synthesis Engine
 │   ├── generator_script.py                           # Python script to mould & bootstrap projects
@@ -83,7 +84,12 @@ SDK/
 │       └── mobile_edge.json                          # Mobile Edge Terminal (Flutter + SQLite)
 │
 ├── tools/                                            # Autonomous Utility Tools
-│   └── archive_conversation.py                       # Conversation archiver CLI & Antigravity Hook
+│   ├── archive_conversation.py                       # Conversation archiver CLI & Antigravity Hook
+│   └── visualize_project_flow.py                     # Master flowchart synthesizer (Madge + Code2Flow + AppMap)
+│
+├── madge/                                            # Bundled Module & Dependency Flowchart Engine
+├── code2flow/                                        # Bundled Function Call-Graph Engine
+├── appmap-js/                                        # Bundled Runtime Execution & API Tracing Engine
 │
 ├── templates/                                        # Boilerplates for Initialized Projects
 │   ├── hooks.json                                    # Antigravity Stop Lifecycle Hook configuration
@@ -96,6 +102,7 @@ SDK/
 │   ├── test-driven-development/                      # Strict Red-Green-Refactor loop & test proof
 │   ├── diagnosing-bugs/                              # Five Whys root cause analysis & anti-masking
 │   ├── security-audit/                               # OWASP Top 10, secret scanning & DAST verification
+│   ├── visual-workflow-mapping/                      # Interactive Madge + Code2Flow + AppMap visual flowcharts
 │   ├── accidental-data-loss-prevention/              # Stop-and-Verify gate on destructive operations
 │   ├── zero-downtime-migrations/                     # Expand-and-contract, schema purity & atomic RPCs
 │   ├── frontend-design/                              # Anti-AI slop, curated palettes & editorial typography

@@ -64,7 +64,12 @@ Before modifying a single line of production code, write an automated test that 
    - ❌ Hardcoding bypass flags (e.g. `if (isDev) return true;` in production auth checks).
    - ❌ Changing function signatures without updating all caller locations.
 
-### STAGE 5: Non-Regression Verification
+### STAGE 5: Non-Regression Verification & Visual Flow Audit
+1. Run full test suite: Verify that previous passing tests still pass.
+2. **Execute Visual Workflow Audit:**
+   `python SDK/tools/visualize_project_flow.py --project-dir .`
+   - Confirm that fixing the bug did not introduce unexpected cyclic couplings or module drift.
+   - Verify zero circular dependencies reported by Madge ([PASS]).
 1. Run the new regression test $\to$ Verify it now **PASSES**.
 2. Run the **entire existing project test suite** $\to$ Verify **100% PASS** rate.
 3. Capture the terminal output as proof.

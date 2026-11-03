@@ -1,0 +1,9 @@
+[submodule "madge"]
+	path = madge
+	url = https://github.com/pahen/madge.git
+[submodule "code2flow"]
+	path = code2flow
+	url = https://github.com/scottrogowski/code2flow.git
+[submodule "appmap-js"]
+	path = appmap-js
+	url = https://github.com/getappmap/appmap-js.git

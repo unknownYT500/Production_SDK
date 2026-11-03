@@ -33,7 +33,11 @@ Modifying existing features carries the highest risk of collateral regressions. 
 ## 2. Granular Step-by-Step Instructions
 
 ### STAGE 1: Blast Radius & Impact Analysis
-1. Before touching any file, search the entire codebase for all references to the function, class, table, or endpoint:
+1. **Automated Visual Dependency Check:**
+   - Execute Madge to identify all module consumers:
+     `node SDK/madge/bin/cli.js --extensions ts,tsx,js,jsx --json src`
+   - Use Code2Flow to inspect upstream callers and downstream callee paths before touching signatures.
+2. Before touching any file, search the entire codebase for all references to the function, class, table, or endpoint:
    - *Example:* Use ripgrep/grep to find all usages of `verifyEphemeralQrToken` or `activeTab`.
 2. Map all dependencies:
    - Is this endpoint consumed by the Mobile app, Web app, or external webhooks?
@@ -67,6 +71,10 @@ Modifying existing features carries the highest risk of collateral regressions. 
 2. Execute tests for **all dependent components identified in Stage 1**.
 3. Verify client build compilation (`npm run build`, `flutter analyze`).
 
-### STAGE 6: Architectural Specification Synchronization
+### STAGE 6: Architectural Specification & Visual Workflow Sync
 1. Update `DATA_FLOWS.md` and `SPEC.md` to reflect the new behavior.
 2. If UI was altered, update user manuals and judge demonstration guides.
+3. **Regenerate Master Visual Flowchart:**
+   `python SDK/tools/visualize_project_flow.py --project-dir .`
+   - Verify that refactoring did not introduce circular dependencies (`madge --circular`).
+   - Confirm updated call-graph paths in `.project_docs/WORKFLOW_FLOWCHART.html`.
